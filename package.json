@@ -7,6 +7,7 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
+    "build-app": "vite build --outDir site",
     "serve": "vite preview"
   },
   "license": "MIT",
