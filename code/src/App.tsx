@@ -40,8 +40,16 @@ const App: Component = () => {
                                 mimeType: f.type,
                                 data: b
                             };
-                            setCurrentImageIdx(images().length)
-                            setImages([...images(), image])
+                            let foundImageIdx = images().findIndex((i) =>
+                                i.name === image.name && i.mimeType === image.mimeType && i.data === image.data)
+
+                            if(foundImageIdx === -1){
+                                setCurrentImageIdx(images().length)
+                                setImages([...images(), image])
+                            } else {
+                                setCurrentImageIdx(foundImageIdx)
+                            }
+
                         })
                 })
 
