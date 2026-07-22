@@ -11,10 +11,10 @@ app.config.timestamp_*.js
 .env*.local
 
 # dependencies
-/node_modules
+/code/node_modules
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 *.launch
